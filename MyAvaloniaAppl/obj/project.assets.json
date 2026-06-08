@@ -1665,11 +1665,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/bbb/Загрузки/MyAvaloniaAppl/MyAvaloniaAppl.csproj",
+      "projectUniqueName": "/home/bbb/test_kpr_2026/MyAvaloniaAppl/MyAvaloniaAppl.csproj",
       "projectName": "MyAvaloniaAppl",
-      "projectPath": "/home/bbb/Загрузки/MyAvaloniaAppl/MyAvaloniaAppl.csproj",
+      "projectPath": "/home/bbb/test_kpr_2026/MyAvaloniaAppl/MyAvaloniaAppl.csproj",
       "packagesPath": "/home/bbb/.nuget/packages/",
-      "outputPath": "/home/bbb/Загрузки/MyAvaloniaAppl/obj/",
+      "outputPath": "/home/bbb/test_kpr_2026/MyAvaloniaAppl/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/bbb/.nuget/NuGet/NuGet.Config"
