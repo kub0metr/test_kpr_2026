@@ -8,18 +8,19 @@ namespace MyAvaloniaAppl.ViewModels;
 public partial class MainWindowViewModel : ViewModelBase
 {   
 
-
-    [ObservableProperty]
-    private string _myText = "my text";
-
-     [ObservableProperty]
-    private string _userName = string.Empty;
-
     [RelayCommand]
-    private void InputClick()
+    private void ProdMan()
     {
         var secondW = new SecondWindow();
         secondW.Show();
-        
+
+    }
+
+      [RelayCommand]
+    private void OrderListing()
+    {
+        var secondW = new OrderListingWindow();
+        secondW.Show();
+
     }
 }
