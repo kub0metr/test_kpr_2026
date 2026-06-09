@@ -100,3 +100,4 @@
 /home/bbb/test_kpr_2026/MyAvaloniaAppl/obj/Debug/net10.0/MyAvaloniaAppl.pdb
 /home/bbb/test_kpr_2026/MyAvaloniaAppl/obj/Debug/net10.0/MyAvaloniaAppl.genruntimeconfig.cache
 /home/bbb/test_kpr_2026/MyAvaloniaAppl/obj/Debug/net10.0/ref/MyAvaloniaAppl.dll
+/home/bbb/test_kpr_2026/MyAvaloniaAppl
