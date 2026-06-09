@@ -20,5 +20,8 @@ sealed class Program
             .WithDeveloperTools()
 #endif
             .WithInterFont()
-            .LogToTrace();
+            .LogToTrace()
+            // ОБЯЗАТЕЛЬНО: Эта строчка включает DevTools по нажатию F12
+            ; 
+
 }

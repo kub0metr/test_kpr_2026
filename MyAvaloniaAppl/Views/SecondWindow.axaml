@@ -1,0 +1,26 @@
+<suki:SukiWindow  xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:suki="clr-namespace:SukiUI.Controls;assembly=SukiUI"
+        xmlns:theme="clr-namespace:SukiUI.Theme;assembly=SukiUI"
+xmlns:vm="using:MyAvaloniaAppl.ViewModels"
+
+        Width="800" Height="450"
+        x:Class="MyAvaloniaAppl.Views.SecondWindow"
+        x:DataType="vm:SecondWindowViewModel"
+        Title="SecondWindow">
+  
+<DataGrid ItemsSource="{Binding Items}" 
+          AutoGenerateColumns="False"
+          GridLinesVisibility="Horizontal"
+          RowBackground="Transparent"
+          HeadersVisibility="Column">
+    <DataGrid.Columns>
+        <DataGridTextColumn Header="Название" Binding="{Binding Name}" Width="*" />
+    </DataGrid.Columns>
+</DataGrid>
+
+
+
+</suki:SukiWindow >

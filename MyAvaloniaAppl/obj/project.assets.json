@@ -161,6 +161,24 @@
           }
         }
       },
+      "Avalonia.Diagnostics/11.3.17": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.3.17",
+          "Avalonia.Controls.ColorPicker": "11.3.17",
+          "Avalonia.Themes.Simple": "11.3.17"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Diagnostics.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Diagnostics.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Avalonia.Fonts.Inter/12.0.4": {
         "type": "package",
         "dependencies": {
@@ -1097,6 +1115,24 @@
         "lib/net10.0/Avalonia.Desktop.xml",
         "lib/net8.0/Avalonia.Desktop.dll",
         "lib/net8.0/Avalonia.Desktop.xml"
+      ]
+    },
+    "Avalonia.Diagnostics/11.3.17": {
+      "sha512": "yzNLiIMVQTVHR/vWx67VvvsKI5o5zuBEO+WtS5aKT+U2/iA5GND3Yy3F8mmkRNLnZjGPwlOWR6la2Y2D58L7pg==",
+      "type": "package",
+      "path": "avalonia.diagnostics/11.3.17",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "avalonia.diagnostics.11.3.17.nupkg.sha512",
+        "avalonia.diagnostics.nuspec",
+        "lib/net6.0/Avalonia.Diagnostics.dll",
+        "lib/net6.0/Avalonia.Diagnostics.xml",
+        "lib/net8.0/Avalonia.Diagnostics.dll",
+        "lib/net8.0/Avalonia.Diagnostics.xml",
+        "lib/netstandard2.0/Avalonia.Diagnostics.dll",
+        "lib/netstandard2.0/Avalonia.Diagnostics.xml"
       ]
     },
     "Avalonia.Fonts.Inter/12.0.4": {
@@ -2073,7 +2109,9 @@
   "projectFileDependencyGroups": {
     "net10.0": [
       "Avalonia >= 12.0.4",
+      "Avalonia.Controls.DataGrid >= 12.0.0",
       "Avalonia.Desktop >= 12.0.4",
+      "Avalonia.Diagnostics >= 11.3.17",
       "Avalonia.Fonts.Inter >= 12.0.4",
       "Avalonia.Themes.Fluent >= 12.0.4",
       "AvaloniaUI.DiagnosticsSupport >= 2.2.1",
@@ -2130,9 +2168,17 @@
             "target": "Package",
             "version": "[12.0.4, )"
           },
+          "Avalonia.Controls.DataGrid": {
+            "target": "Package",
+            "version": "[12.0.0, )"
+          },
           "Avalonia.Desktop": {
             "target": "Package",
             "version": "[12.0.4, )"
+          },
+          "Avalonia.Diagnostics": {
+            "target": "Package",
+            "version": "[11.3.17, )"
           },
           "Avalonia.Fonts.Inter": {
             "target": "Package",
