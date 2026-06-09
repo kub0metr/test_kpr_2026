@@ -2,7 +2,7 @@ from fastapi import APIRouter
 from models import order
 
 router = APIRouter(
-    prefix="/bakery/order/",
+    prefix="/bakery/order",
     tags=""
 )
 
@@ -11,7 +11,7 @@ async def get_order_by_id(order_id : int) -> order.Order:
     return ""
 
 @router.post("/create")
-async def create_order(order : order.Order) -> id:
+async def create_order(order : order.Order) -> int:
     return ""
 
 @router.patch("/change/{order_id}")

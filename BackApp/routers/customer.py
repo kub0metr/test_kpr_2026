@@ -2,7 +2,7 @@ from fastapi import APIRouter
 from models import customer
 
 router = APIRouter(
-    prefix="bakery/customer",
+    prefix="/bakery/customer",
     tags=["customer"]
 )
 

@@ -1,2 +1,4 @@
 BackApp/__pycache__
 BackApp/venv
+BackApp/models/__pycache__
+BackApp/routers/__pycache__
