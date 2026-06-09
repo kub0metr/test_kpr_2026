@@ -2,18 +2,12 @@ from typing import List, Optional
 from datetime import datetime
 from sqlalchemy import create_engine, ForeignKey, String, func, Enum
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
+from BackApp.models.product import ProductCategory
 import enum
 
 DATABASE_URL = "postgresql://postgres:123@localhost:5432/belle"
 
 engine = create_engine(DATABASE_URL, echo=True)
-
-
-class ProductCategory(enum.Enum):
-    VIENNOISERIE = "VIENNOISERIE"
-    BREAD = "BREAD"
-    PATISSERIE = "PATTISSERIE"
-    TARTE = "TARTE"
 
 
 class Gender(enum.Enum):
@@ -32,6 +26,8 @@ class Base(DeclarativeBase):
 
 
 class sales_transactions(Base):
+    """Класс отображающий таблицу Products"""
+
     __tablename__ = "Products"
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
@@ -48,6 +44,8 @@ class sales_transactions(Base):
 
 
 class customers(Base):
+    """Класс отображающий таблицу Customers"""
+
     __tablename__ = "Customers"
     customer_id: Mapped[int] = mapped_column(primary_key=True)
     first_name: Mapped[str] = mapped_column(String(100), nullable=False)
