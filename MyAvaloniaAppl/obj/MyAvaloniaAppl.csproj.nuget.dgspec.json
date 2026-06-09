@@ -68,6 +68,14 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.4.1, )"
+            },
+            "ScottPlot.Avalonia": {
+              "target": "Package",
+              "version": "[5.1.58, )"
+            },
+            "SukiUI": {
+              "target": "Package",
+              "version": "[7.0.1, )"
             }
           },
           "imports": [
