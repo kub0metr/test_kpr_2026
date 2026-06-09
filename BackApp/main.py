@@ -1,22 +1,11 @@
 from fastapi import FastAPI
 from models import base_model
+from routers import customer, food, order, recipe, sales
 
-app = FastAPI()
+bakery_app = FastAPI()
 
-default_text = "корпоративные программные решения"
-
-"""Обработчик стандартного get запроса
-
-    Raises:
-        ValueError: Если данные не соотвествуют стандартному формату
-
-    Returns:
-        _type_: base_mode.BaseModel
-        
-    """
-@app.get("/get")
-async def get(message : base_model.BaseModel):
-
-    if (message["message"] == default_text):
-        return default_text
-    raise ValueError("Данные введеные неверно")
+bakery_app.add_api_route(customer.router)
+bakery_app.add_api_route(food.router)
+bakery_app.add_api_route(order.router)
+bakery_app.add_api_route(recipe.router)
+bakery_app.api_route(sales.router)
