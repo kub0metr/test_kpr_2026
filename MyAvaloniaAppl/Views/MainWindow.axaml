@@ -9,6 +9,7 @@
         x:Class="MyAvaloniaAppl.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
+        x:CompileBindings="True"
         Title="UserInterface">
 
     <Design.DataContext>

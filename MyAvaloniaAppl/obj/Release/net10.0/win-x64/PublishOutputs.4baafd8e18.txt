@@ -1,0 +1,7 @@
+/home/bbb/test_kpr_2026/MyAvaloniaAppl/publish/win-x64/MyAvaloniaAppl.pdb
+/home/bbb/test_kpr_2026/MyAvaloniaAppl/publish/win-x64/av_libglesv2.dll
+/home/bbb/test_kpr_2026/MyAvaloniaAppl/publish/win-x64/libHarfBuzzSharp.dll
+/home/bbb/test_kpr_2026/MyAvaloniaAppl/publish/win-x64/libHarfBuzzSharp.pdb
+/home/bbb/test_kpr_2026/MyAvaloniaAppl/publish/win-x64/libSkiaSharp.dll
+/home/bbb/test_kpr_2026/MyAvaloniaAppl/publish/win-x64/libSkiaSharp.pdb
+/home/bbb/test_kpr_2026/MyAvaloniaAppl/publish/win-x64/MyAvaloniaAppl.exe
