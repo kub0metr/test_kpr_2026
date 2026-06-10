@@ -1,0 +1,10 @@
+/products
+id	1
+name	"Круассан классический"
+category	"BREAD"
+list_ingredients	""
+price	150.0JS:150
+cost	45.0JS:45
+is_seasonable	true
+is_selling	true
+first_date	"2026-06-10T07:41:17.027511"
