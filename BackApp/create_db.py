@@ -1,13 +1,21 @@
 from typing import List, Optional
 from datetime import datetime
 from sqlalchemy import create_engine, ForeignKey, String, func, Enum
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
+from sqlalchemy.orm import (
+    DeclarativeBase,
+    Mapped,
+    mapped_column,
+    relationship,
+    sessionmaker,
+)
+from db_models import db_product
 
 import enum
 
 DATABASE_URL = "postgresql://postgres:123@db:5432/belle"
 
 engine = create_engine(DATABASE_URL, echo=True)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 
 class ProductCategory(enum.Enum):
@@ -83,9 +91,59 @@ class customers(Base):
     churned: Mapped[bool] = mapped_column(default=False)
 
 
+def seed_products():
+    session = SessionLocal()
+    try:
+        product_count = session.query(db_product.DBProduct).count()
+        if product_count > 0:
+            print("Таблица Products уже содержит данные. Пропускаем заполнение.")
+            return
+
+        print("Заполнение таблицы Products тестовыми данными...")
+
+        test_products = [
+            db_product.DBProduct(
+                name="Круассан классический",
+                category="BREAD",
+                ingredients="Мука, сливочное масло, дрожжи, сахар, соль",
+                price=150.0,
+                cost=45.0,
+                is_seasonable=False,
+                is_selling=True,
+                created_at=datetime.now(),
+            ),
+            db_product.DBProduct(
+                name="Торт Наполеон",
+                category="PATTISSERIE",
+                ingredients="Слоеное тесто, заварной крем, ваниль",
+                price=1200.0,
+                cost=400.0,
+                is_seasonable=False,
+                is_selling=True,
+                created_at=datetime.now(),
+            ),
+            db_product.DBProduct(
+                name="Пряничный человечек",
+                category="TARTE",
+                ingredients="Мука, имбирь, корица, мед, глазурь",
+                price=180.0,
+                cost=35.0,
+                is_seasonable=True,
+                is_selling=True,
+                created_at=datetime.now(),
+            ),
+        ]
+        session.add_all(test_products)
+        session.commit()
+        print("Тестовые данные успешно добавлены!")
+    except ():
+        print("ОШИБКА")
+
+
 def init_db():
     print("Начало создания таблиц")
     Base.metadata.create_all(bind=engine)
+    seed_products()
     print("Конец создания таблиц")
 
 
