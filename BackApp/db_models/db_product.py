@@ -16,9 +16,9 @@ class DBProduct(Base):
         Enum(ProductCategory, values_callable=lambda x: [e.value for e in x]),
         nullable=False,
     )
-    ingredients: Mapped[str] = mapped_column(String(1000), nullable=False)
+    ingredients: Mapped[str] = mapped_column(String(1000), nullable=False, default="")
     price: Mapped[float] = mapped_column()
     cost: Mapped[float] = mapped_column()
-    is_seasonable: Mapped[bool] = mapped_column()
-    is_selling: Mapped[bool] = mapped_column
-    created_at: Mapped[datetime] = mapped_column()
+    is_seasonable: Mapped[bool] = mapped_column(default=False)
+    is_selling: Mapped[bool] = mapped_column(default=False)
+    created_at: Mapped[datetime] = mapped_column(default=datetime.now)

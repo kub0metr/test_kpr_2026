@@ -18,13 +18,13 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 123
-      POSTGRES_DB: belle
+      POSTGRES_DB: belle1
     ports:
       - "5433:5432"
     networks:
       - app-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d belle"]
+      test: ["CMD-SHELL", "pg_isready -U postgres -d belle1"]
       interval: 1s
       timeout: 1s
       retries: 5

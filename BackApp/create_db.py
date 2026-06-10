@@ -12,7 +12,7 @@ from db_models import db_product
 
 import enum
 
-DATABASE_URL = "postgresql://postgres:123@db:5432/belle"
+DATABASE_URL = "postgresql://postgres:123@db:5432/belle1"
 
 engine = create_engine(DATABASE_URL, echo=True)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
@@ -58,7 +58,7 @@ class sales_transactions(Base):
     price: Mapped[float] = mapped_column()
     cost: Mapped[float] = mapped_column()
     is_seasonable: Mapped[bool] = mapped_column()
-    is_selling: Mapped[bool] = mapped_column
+    is_selling: Mapped[bool] = mapped_column()
     created_at: Mapped[datetime] = mapped_column()
 
 
