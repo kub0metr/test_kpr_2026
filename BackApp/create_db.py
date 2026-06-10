@@ -2,12 +2,23 @@ from typing import List, Optional
 from datetime import datetime
 from sqlalchemy import create_engine, ForeignKey, String, func, Enum
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
-from BackApp.models.product import ProductCategory
+
 import enum
 
-DATABASE_URL = "postgresql://postgres:123@localhost:5432/belle"
+DATABASE_URL = "postgresql://postgres:123@db:5432/belle"
 
 engine = create_engine(DATABASE_URL, echo=True)
+
+
+class ProductCategory(enum.Enum):
+    """
+    Энам для отображения категорий продуктов
+    """
+
+    VIENNOISERIE = "VIENNOISERIE"
+    BREAD = "BREAD"
+    PATISSERIE = "PATTISSERIE"
+    TARTE = "TARTE"
 
 
 class Gender(enum.Enum):
