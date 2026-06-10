@@ -1,0 +1,50 @@
+<suki:SukiWindow xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:suki="clr-namespace:SukiUI.Controls;assembly=SukiUI"
+        xmlns:theme="clr-namespace:SukiUI.Theme;assembly=SukiUI"
+        xmlns:vm="using:MyAvaloniaAppl.ViewModels"
+        Width="500" Height="650"
+        x:Class="MyAvaloniaAppl.Views.AddEdProductWindow"
+        x:DataType="vm:AddEdProductModel"
+        Title="AddEdProduct">
+  
+        
+<Grid>
+   <Grid.ColumnDefinitions>    
+  <ColumnDefinition Width="Auto"/>
+  <ColumnDefinition Width="*"/>
+  </Grid.ColumnDefinitions>
+
+
+ <Grid.RowDefinitions>
+    <RowDefinition Height="*"/>
+  <RowDefinition Height="*"/>
+  <RowDefinition Height="*"/>
+  <RowDefinition Height="*"/>
+  <RowDefinition Height="*"/>
+  <RowDefinition Height="*"/>
+  <RowDefinition Height="*"/>
+  </Grid.RowDefinitions>
+
+ <Label Grid.Column="0" Grid.Row="0" Content="Category:" HorizontalAlignment="Center"></Label>
+<Label Grid.Column="0" Grid.Row="1" Content="ProductName:" HorizontalAlignment="Center"></Label>
+<Label Grid.Column="0" Grid.Row="2" Content="Price:" HorizontalAlignment="Center"></Label>
+<Label Grid.Column="0" Grid.Row="3" Content="Cost:" HorizontalAlignment="Center"></Label>
+<Label Grid.Column="0" Grid.Row="4" Content="IntroducedDate:" HorizontalAlignment="Center"></Label>
+
+  <ComboBox Grid.Column="0" Grid.Row="5" Text="Active"></ComboBox>
+    <Label Grid.Column="0" Grid.Row="6" Content="Description:" HorizontalAlignment="Center"></Label>
+
+<CheckBox Grid.Row="0" Grid.Column="1" ></CheckBox>
+<TextBox Grid.Column="1" Grid.Row="1"></TextBox>
+
+
+     </Grid> 
+
+
+
+
+
+</suki:SukiWindow>

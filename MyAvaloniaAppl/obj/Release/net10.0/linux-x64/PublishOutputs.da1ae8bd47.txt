@@ -1,0 +1,4 @@
+/home/bbb/test_kpr_2026/MyAvaloniaAppl/publish/linux-x64/MyAvaloniaAppl.pdb
+/home/bbb/test_kpr_2026/MyAvaloniaAppl/publish/linux-x64/libHarfBuzzSharp.so
+/home/bbb/test_kpr_2026/MyAvaloniaAppl/publish/linux-x64/libSkiaSharp.so
+/home/bbb/test_kpr_2026/MyAvaloniaAppl/publish/linux-x64/MyAvaloniaAppl

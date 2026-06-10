@@ -1,0 +1,61 @@
+<suki:SukiWindow  xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:suki="clr-namespace:SukiUI.Controls;assembly=SukiUI"
+        xmlns:theme="clr-namespace:SukiUI.Theme;assembly=SukiUI"
+xmlns:vm="using:MyAvaloniaAppl.ViewModels"
+
+        Width="800" Height="450"
+        x:Class="MyAvaloniaAppl.Views.SecondWindow"
+        x:DataType="vm:SecondWindowViewModel"
+        Title="SecondWindow">
+  
+<Grid>
+  <Grid.RowDefinitions>
+    
+  <RowDefinition Height="Auto"></RowDefinition>
+  <RowDefinition Height="*"></RowDefinition>
+  </Grid.RowDefinitions>
+
+<StackPanel Grid.Row="0" Orientation="Horizontal" Spacing="20">
+  
+  <TextBox Text="{Binding SearchText}" Width="500"></TextBox>
+    <Button Content="Add new product" Command="{Binding AddNPrCommand}"></Button>
+
+</StackPanel>
+
+
+<DataGrid  Grid.Row="1" ItemsSource="{Binding Items}" 
+          AutoGenerateColumns="False"
+          GridLinesVisibility="Horizontal"
+          RowBackground="Transparent"
+          >
+    <DataGrid.Columns>
+      
+        <DataGridCheckBoxColumn Header="Active" Width="70" Binding="{Binding Active}"/>
+        <DataGridTextColumn Header="ProductName" Binding="{Binding ProductName}" Width="*" />
+        <DataGridTextColumn Header="Category" Binding="{Binding Category}" Width="*" />
+        <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="*" />
+        <DataGridTextColumn Header="Cost" Binding="{Binding Cost}" Width="*" />
+       <!-- <DataGridTextColumn Header="Action" Binding="{Binding Action}" Width="*" />-->
+
+        <DataGridTemplateColumn Header="Action" Width="120">
+            <DataGridTemplateColumn.CellTemplate>
+                <DataTemplate>                   
+                    <Button Content="Открыть" 
+                            Classes="Basic"
+                            Command="{Binding $parent[Window].DataContext.ActionCommand}"
+                            CommandParameter="{Binding}"
+                            Margin="5,2"
+                            HorizontalAlignment="Stretch" 
+                            HorizontalContentAlignment="Center"/>
+                </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+        </DataGridTemplateColumn>
+    </DataGrid.Columns>
+</DataGrid>
+
+</Grid>
+
+</suki:SukiWindow >

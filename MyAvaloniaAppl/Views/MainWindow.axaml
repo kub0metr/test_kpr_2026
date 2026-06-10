@@ -1,13 +1,16 @@
-<Window xmlns="https://github.com/avaloniaui"
+<suki:SukiWindow xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:MyAvaloniaAppl.ViewModels"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+      
+        xmlns:suki="clr-namespace:SukiUI.Controls;assembly=SukiUI"
+        xmlns:theme="clr-namespace:SukiUI.Theme;assembly=SukiUI"
+
+        Width="300" Height="450"
         x:Class="MyAvaloniaAppl.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="MyAvaloniaAppl">
+        x:CompileBindings="True"
+        Title="UserInterface">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -15,16 +18,23 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    
 
-    <StackPanel Orientation="Horizontal">
-        <TextBlock Name= "AppText" />
-        <Button Click="Button_Click" Content="Click me"/>
-
-    </StackPanel>
-    
-    
-    
+<suki:GlassCard  HorizontalAlignment="Center">
 
 
-</Window>
+ <StackPanel Spacing="10">
+                
+     <Button Content="Product managment" Command="{Binding ProdManCommand}"/>
+     <Button Content="Order listing" Command="{Binding OrderListingCommand}"/>
+
+   </StackPanel>
+
+
+      
+</suki:GlassCard>
+
+    
+    
+
+
+</suki:SukiWindow>

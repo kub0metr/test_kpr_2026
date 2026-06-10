@@ -37,9 +37,10 @@ namespace AvApplRepo.HttpService
                 var response = await _httpClient.GetAsync("http://10.13.79.86:8000/get" );
                 response.EnsureSuccessStatusCode();
 
+                string respAnswer = await _httpClient.GetStringAsync("http://10.13.79.86:8000/get" );
                 
 
-                log = "Успех! Ответ: " + response.ToString();
+                log = "Успех! Ответ: " + respAnswer.ToString();
             }
             catch (Exception ex)
             {

@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+     
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,7 +15,9 @@
 
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="12.0.4" />
+    <PackageReference Include="Avalonia.Controls.DataGrid" Version="12.0.0" />
     <PackageReference Include="Avalonia.Desktop" Version="12.0.4" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="11.3.17" />
     <PackageReference Include="Avalonia.Themes.Fluent" Version="12.0.4" />
     <PackageReference Include="Avalonia.Fonts.Inter" Version="12.0.4" />
     <PackageReference Include="AvaloniaUI.DiagnosticsSupport" Version="2.2.1">
@@ -22,5 +25,7 @@
       <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
     </PackageReference>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.1" />
+    <PackageReference Include="ScottPlot.Avalonia" Version="5.1.58" />
+    <PackageReference Include="SukiUI" Version="7.0.1" />
   </ItemGroup>
 </Project>
