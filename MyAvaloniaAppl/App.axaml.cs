@@ -6,6 +6,9 @@ using System.Linq;
 using Avalonia.Markup.Xaml;
 using MyAvaloniaAppl.ViewModels;
 using MyAvaloniaAppl.Views;
+using System.IO;
+using System;
+using System.Text.Json;
 
 namespace MyAvaloniaAppl;
 
@@ -27,5 +30,22 @@ public partial class App : Application
         }
 
         base.OnFrameworkInitializationCompleted();
+    }
+
+    
+}
+
+public class AppConfig
+{
+    public string ApiBaseUrl{get;set;}
+}
+
+public static class JsonConfigurationF
+{
+    public static AppConfig LoadConfiguration()
+    {
+        string configPath = Path.Combine(AppContext.BaseDirectory, "appsettings.json");
+        string json = File.ReadAllText(configPath);
+        return JsonSerializer.Deserialize<AppConfig>(json);
     }
 }

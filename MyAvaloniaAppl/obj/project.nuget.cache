@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vVZV1XAbgMM=",
+  "dgSpecHash": "47EeqNhSIzc=",
   "success": true,
   "projectFilePath": "/home/bbb/test_kpr_2026/MyAvaloniaAppl/MyAvaloniaAppl.csproj",
   "expectedPackageFiles": [
@@ -33,7 +33,6 @@
     "/home/bbb/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "/home/bbb/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "/home/bbb/.nuget/packages/microsoft.io.recyclablememorystream/3.0.1/microsoft.io.recyclablememorystream.3.0.1.nupkg.sha512",
-    "/home/bbb/.nuget/packages/microsoft.net.illink.tasks/10.0.8/microsoft.net.illink.tasks.10.0.8.nupkg.sha512",
     "/home/bbb/.nuget/packages/scottplot/5.1.58/scottplot.5.1.58.nupkg.sha512",
     "/home/bbb/.nuget/packages/scottplot.avalonia/5.1.58/scottplot.avalonia.5.1.58.nupkg.sha512",
     "/home/bbb/.nuget/packages/skiasharp/3.119.4/skiasharp.3.119.4.nupkg.sha512",
@@ -45,10 +44,7 @@
     "/home/bbb/.nuget/packages/skiasharp.nativeassets.win32/3.119.4/skiasharp.nativeassets.win32.3.119.4.nupkg.sha512",
     "/home/bbb/.nuget/packages/sukiui/7.0.1/sukiui.7.0.1.nupkg.sha512",
     "/home/bbb/.nuget/packages/system.linq.dynamic.core/1.7.2/system.linq.dynamic.core.1.7.2.nupkg.sha512",
-    "/home/bbb/.nuget/packages/tmds.dbus.protocol/0.92.0/tmds.dbus.protocol.0.92.0.nupkg.sha512",
-    "/home/bbb/.nuget/packages/microsoft.netcore.app.runtime.win-x64/10.0.8/microsoft.netcore.app.runtime.win-x64.10.0.8.nupkg.sha512",
-    "/home/bbb/.nuget/packages/microsoft.aspnetcore.app.runtime.win-x64/10.0.8/microsoft.aspnetcore.app.runtime.win-x64.10.0.8.nupkg.sha512",
-    "/home/bbb/.nuget/packages/microsoft.netcore.app.host.win-x64/10.0.8/microsoft.netcore.app.host.win-x64.10.0.8.nupkg.sha512"
+    "/home/bbb/.nuget/packages/tmds.dbus.protocol/0.92.0/tmds.dbus.protocol.0.92.0.nupkg.sha512"
   ],
   "logs": []
 }

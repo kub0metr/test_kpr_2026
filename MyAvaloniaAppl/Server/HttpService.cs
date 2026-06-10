@@ -5,22 +5,24 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AvApplRepo.HttpService
 {
     public class GiteaService
     {
         private readonly HttpClient _httpClient;
-        private readonly string _baseUrl;
-        private readonly string _apiToken;
-        private readonly string _urlrepo;
+        private string _baseUrl ;
+        //private readonly string _apiToken;
+        //private readonly string _urlrepo;
 
-        public GiteaService()
+        public GiteaService(string bUrl)
         {
-            _baseUrl = "http://10.13.79.86:8000";
+            _baseUrl = bUrl;
             _httpClient = new HttpClient();
 
 
@@ -31,23 +33,42 @@ namespace AvApplRepo.HttpService
 
         public async Task<string> DownloadHexFile()
         {
-            string log = null;
+            string respAnswer = null;
             try
             {
-                var response = await _httpClient.GetAsync("http://10.13.79.86:8000/get" );
-                response.EnsureSuccessStatusCode();
+                //var response = await _httpClient.GetAsync(_baseUrl );
+                //response.EnsureSuccessStatusCode();
 
-                string respAnswer = await _httpClient.GetStringAsync("http://10.13.79.86:8000/get" );
+                respAnswer = await _httpClient.GetStringAsync(_baseUrl );
                 
 
-                log = "Успех! Ответ: " + respAnswer.ToString();
+                //respAnswer = "Успех! Ответ: " + respAnswer.ToString();
             }
             catch (Exception ex)
             {
-                log = $"Ошибка: {ex.Message}! "  ;
+                respAnswer = $"Ошибка: {ex.Message}! "  ;
             }
-            return log;
+            return respAnswer;
         }
+
+        public async Task<string> ResponseM(string mess)
+        {
+            string responseBody = "";
+
+            var resp = new StringContent(mess, Encoding.UTF8, "application/json");
+            try
+            {
+                HttpResponseMessage response = await _httpClient.PostAsync(_baseUrl, resp);
+
+                responseBody = await response.Content.ReadAsStringAsync();
+            }
+            catch(Exception ex)
+            {
+                responseBody = $"Ошибка! " + ex.ToString();
+            }
+             return responseBody;
+        }
+       
     }
 
     public class GiteaReleases
